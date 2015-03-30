@@ -1,3 +1,8 @@
+```console
+$ cd ~
+$ git clone git@github.com:alexandre-mbm/dotfiles-home.git .
+```
+
 Para adicionar arquivo: `git add -f ARQUIVO`
 
 Para verificar algumas pendências:
