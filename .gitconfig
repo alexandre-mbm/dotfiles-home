@@ -1,0 +1,26 @@
+[user]
+	name = Alexandre Magno
+	email = alexandre.mbm@gmail.com
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1207x841+1+1
+	main-window-view = FileView
+	history-view-vpane-position = 659
+	file-view-vpane-position = 778
+[alias]
+        tree-all = log --oneline --graph --decorate --all
+        tree-branch = log --oneline --graph --decorate --abbrev-commit
+	tree-log = log --graph --name-status
+	undo = reset --soft HEAD~1
+	github = ! bash -c 'git config -l | grep remote.origin.url | sed \"s/^.*[\\/:]\\([^:\\/]*\\/[^\\/]*\\)$/http:\\/\\/github.com\\/\\1/\" | tail -n 1 | xargs firefox 2>/dev/null'
+[diff]
+#	external = /home/alexandre/.git-extra/git_meld_diff.sh
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[push]
+	default = simple
+[core]
+	excludesfile = /home/alexandre/.gitignore_global
