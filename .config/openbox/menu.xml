@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>x-terminal-emulator</execute>
+			</action>
+		</item>
+		<item label="Relógio">
+			<action name="Execute">
+				<execute>xclock -digital -strftime &quot;%A, %d-%m-%Y  %H:%M  %B&quot;</execute>
+			</action>
+		</item>
+		<item label="Calculadora">
+			<action name="Execute">
+				<execute>gnome-calculator</execute>
+			</action>
+		</item>
+		<item label="Navegador de Arquivos">
+			<action name="Execute">
+				<execute>nautilus --no-desktop</execute>
+			</action>
+		</item>
+		<item label="Navegador de Internet">
+			<action name="Execute">
+				<execute>x-www-browser</execute>
+			</action>
+		</item>
+		<item label="Editor de Texto">
+			<action name="Execute">
+				<execute>gedit</execute>
+			</action>
+		</item>
+		<item label="Inkscape">
+			<action name="Execute">
+				<execute>inkscape</execute>
+			</action>
+		</item>
+		<!-- This requires the presence of the 'menu' package to work -->
+		<item label="Gimp">
+			<action name="Execute">
+				<execute>gimp</execute>
+			</action>
+		</item>
+		<menu id="/Debian"/>
+		<separator/>
+		<menu id="client-list-menu"/>
+		<separator/>
+		<menu id="root-menu-722813" label="Configurações">
+			<item label="ObMenu">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<item label="ObConf">
+				<action name="Execute">
+					<execute>obconf</execute>
+				</action>
+			</item>
+		</menu>
+		<item label="Reconfigurar">
+			<action name="Reconfigure"/>
+		</item>
+		<item label="Reiniciar">
+			<action name="Restart"/>
+		</item>
+		<separator/>
+		<item label="Sair">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>
