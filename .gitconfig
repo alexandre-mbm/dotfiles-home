@@ -1,0 +1,5 @@
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[user]
+	name = Alexandre Magno
+	email = alexandre.mbm@gmail.com
