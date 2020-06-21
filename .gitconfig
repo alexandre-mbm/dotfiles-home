@@ -1,5 +1,6 @@
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+	login = "!bash ~/.glogin"
 [user]
 	name = Alexandre Magno
 	email = alexandre.mbm@gmail.com

@@ -1,0 +1,40 @@
+#!/bin/bash
+
+function agent_is_here() {
+  if [ -z "$SSH_AGENT_PID" ]
+  then
+    echo 1
+    return
+  fi
+  ps -p $SSH_AGENT_PID -o comm= \
+    >/dev/null
+  echo $?
+}
+
+# echo $SSH_AGENT_PID
+
+if [ $(agent_is_here) -ne 0 ] # starts it!
+then
+  echo "eval \$(ssh-agent -s)"
+  exit 1
+fi
+
+ssh-add -l >/dev/null; code=$?
+
+if [ $code -eq 0 ]
+then
+  ssh -T git@github.com
+  exit 0
+fi
+
+if [ $code -ne 1 ]
+then
+  echo "unknow error code: $code"
+  echo
+  ssh-add -l
+  exit 1
+fi
+
+ssh-add  # main flow
+ssh -T git@github.com
+
