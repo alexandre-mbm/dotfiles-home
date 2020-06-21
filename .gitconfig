@@ -1,5 +1,6 @@
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+	login = "!ssh-add -l ; stat=$? ; [ $stat -eq 2 ] && eval $(ssh-agent -s) && ssh-add ; [ $stat -eq 1 ] && ssh-add"
 [user]
 	name = Alexandre Magno
 	email = alexandre.mbm@gmail.com
