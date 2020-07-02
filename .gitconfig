@@ -1,6 +1,7 @@
 [alias]
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
   login = "!bash ~/.glogin"
+  logout = "!bash -c 'killall ssh-agent'"
 [user]
   name = Alexandre Magno
   email = alexandre.mbm@gmail.com
