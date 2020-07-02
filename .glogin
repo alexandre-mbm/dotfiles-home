@@ -15,7 +15,8 @@ function agent_is_here() {
 
 if [ $(agent_is_here) -ne 0 ] # starts it!
 then
-  echo "eval \$(ssh-agent -s)"
+  echo "Clipboard: eval \$(ssh-agent -s)"
+  termux-clipboard-set "eval \`ssh-agent -s\` ; git login"
   exit 1
 fi
 
