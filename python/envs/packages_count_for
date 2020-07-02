@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import pkg_resources
+import importlib
+import sys
+
+virtualenv = 'grip'
+virtualenv = sys.argv[1]
+
+python_version = '3.8'
+
+sys.path.insert(len(sys.path), '/data/data/com.termux/files/home/python/envs/%s/lib/python%s/site-packages' % (virtualenv, python_version))
+
+importlib.reload(pkg_resources)
+
+#print(sys.path)
+
+ws = pkg_resources.working_set
+
+# packages = sorted(["%s==%s" % (i.key, i.version) for i in ws])
+
+count = len(list(ws))
+
+print("%s packages" % count)
